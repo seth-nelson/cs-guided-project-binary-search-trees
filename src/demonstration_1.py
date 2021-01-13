@@ -31,9 +31,12 @@ class BSTNode:
             # Create a new node as a left child of current node
                 self.left = BSTNode(value)
             else:
-                
+                self.left.insert(value)
             
         else:
             # The value must go right
             if self.right is None:
                 self.right = BSTNode(value)
+            else:
+                # let the right hand Node figure it out
+                self.right.insert(value)
