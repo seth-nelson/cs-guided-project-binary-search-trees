@@ -18,12 +18,22 @@ Given the following binary tree
 
 your function should return the depth = 3.
 """
-class BinaryTreeNode:
-    def __init__(self, value=0, left=None, right=None):
+class BSTNode:
+    def __init__(self, value):
         self.value = value
-        self.left = left
-        self.right = right
+        self.left = None
+        self.right = None
 
-def maxDepth(self, root):
-    # Your code here
-
+    def insert(self, value):
+        if value <= self.value:
+            # The value must go left
+            if self.left is None:
+            # Create a new node as a left child of current node
+                self.left = BSTNode(value)
+            else:
+                
+            
+        else:
+            # The value must go right
+            if self.right is None:
+                self.right = BSTNode(value)
