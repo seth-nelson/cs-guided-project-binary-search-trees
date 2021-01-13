@@ -40,3 +40,31 @@ class BSTNode:
             else:
                 # let the right hand Node figure it out
                 self.right.insert(value)
+                
+    def search(self, target):
+        if target == self.value:
+            # we have found the item
+            return True
+        if target < self.value:
+            # search the left side of the tree
+            if self.left is None:
+                return False
+            # if a node exists to the left, call the search on that node
+            return self.left.search(target)
+            
+        else:
+            # search the right side of the tree
+            if self.right is None:
+                return False
+            return self.right.search(target)
+        
+
+root = BSTNode(8)
+root.insert(5)
+root.insert(7)
+root.insert(10)
+root.insert(13)
+
+print(root.search(7))
+print(root.search(9))
+print(root.search(10))
