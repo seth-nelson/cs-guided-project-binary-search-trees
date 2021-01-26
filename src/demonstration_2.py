@@ -39,3 +39,4 @@ class BinaryTreeNode:
         largest_height = max(right_height, left_height)
 ​
         return 1 + largest_height
+    
